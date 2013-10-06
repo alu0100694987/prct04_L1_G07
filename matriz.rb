@@ -1,3 +1,5 @@
+#!/usr/bin/ruby   
+#Linea para ejecutar el interprete ruby sobre el archivo
 
 # Práctica 4 - LPP - L1 - G07
 # Autores:
@@ -43,7 +45,7 @@ end
 	m1 = [[ m1.to_i ]]
 	puts " \n""n"" Para reinsertar valor\n"
 	confirm = gets
-    while (confirm=="n")
+    end while (confirm=="n")
     
     
     for(i=1; i<tam ;i++)
@@ -52,14 +54,29 @@ end
 	aux=gets
 	puts " \n""n"" Para reinsertar valor\n"
 	confirm = gets
-      while (confirm=="n")
+      end while (confirm=="n")
     
       aux=aux.to_i
-      m1[i][j]  
-      
-	
+      m1 << [aux] 
+    }
+    
+    for(j=1; j<tam; j++)
+    {  
+      for(i=0; i<tam ; i++)
+      {
+        begin 
+	  aux=gets
+	  puts " \n""n"" Para reinsertar valor\n"
+	  confirm = gets
+        end while (confirm=="n")
   
-  
+        aux=aux.to_i
+        m1[i] << aux 
+      }
+    }
+    
+    puts m1
+    
   # 1.3 Generar matrices aleatoriamente (M1, M2 - Valores [1 - 99])
   else
     
