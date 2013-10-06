@@ -36,7 +36,28 @@ end
   # 1.2 Rellenar matrices desde teclado (M1, M2 - Valores [1 - 99])
   if (elec)
     
-    # PENDIENTE
+    puts "\n Si indica por teclado una cadena que no empieze por un numero se guardara en la matriz como un 0.\n"
+    
+    begin 
+	m1 = gets
+	m1 = [[ m1.to_i ]]
+	puts " \n""n"" Para reinsertar valor\n"
+	confirm = gets
+    while (confirm=="n")
+    
+    
+    for(i=1; i<tam ;i++)
+    {
+      begin 
+	aux=gets
+	puts " \n""n"" Para reinsertar valor\n"
+	confirm = gets
+      while (confirm=="n")
+    
+      aux=aux.to_i
+      m1[i][j]  
+      
+	
   
   
   # 1.3 Generar matrices aleatoriamente (M1, M2 - Valores [1 - 99])

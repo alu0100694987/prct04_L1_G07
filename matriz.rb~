@@ -36,7 +36,11 @@ end
   # 1.2 Rellenar matrices desde teclado (M1, M2 - Valores [1 - 99])
   if (elec)
     
-    # PENDIENTE
+    for(i=0; i<=tam ;i++)
+    {
+      mx= 
+      
+	
   
   
   # 1.3 Generar matrices aleatoriamente (M1, M2 - Valores [1 - 99])
