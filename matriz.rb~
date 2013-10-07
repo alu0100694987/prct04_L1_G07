@@ -42,7 +42,9 @@ end
   # 1.3 Generar matrices aleatoriamente (M1, M2 - Valores [1 - 99])
   else
     
-    # PENDIENTE
+    
+    m1 = Array.new(tam, Array.new(tam) {rand(100)})
+    m2 = Array.new(tam, Array.new(tam) {rand(100)})
     
   end
 
