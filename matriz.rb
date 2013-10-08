@@ -10,7 +10,7 @@
 # Función mostrar_matriz (matriz)
 def mostrar_matriz (matriz)
   
-  # PENDIENTE
+  print matriz
   
 end
 
@@ -39,43 +39,45 @@ end
   if (elec)
     
     puts "\n Si indica por teclado una cadena que no empieze por un numero se guardara en la matriz como un 0.\n"
+ 
+
+    puts "m1 : "
     
-    begin 
-	m1 = gets
-	m1 = [[ m1.to_i ]]
-	puts " \n""n"" Para reinsertar valor\n"
-	confirm = gets
-    end while (confirm=="n")
+    m1 = gets
+    m1 = [[ m1.to_i ]]
     
-    
-    for(i=1; i<tam ;i++)
-    {
-      begin 
-	aux=gets
-	puts " \n""n"" Para reinsertar valor\n"
-	confirm = gets
-      end while (confirm=="n")
-    
+    for i in (1..(tam-1))  
+      aux=gets
       aux=aux.to_i
       m1 << [aux] 
-    }
+    end
     
-    for(j=1; j<tam; j++)
-    {  
-      for(i=0; i<tam ; i++)
-      {
-        begin 
-	  aux=gets
-	  puts " \n""n"" Para reinsertar valor\n"
-	  confirm = gets
-        end while (confirm=="n")
-  
+    for i in (1..(tam-1))  
+      for j in (0..(tam-1))    
+	aux=gets
         aux=aux.to_i
-        m1[i] << aux 
-      }
-    }
+        m1[j] << aux 
+      end
+    end
+
+  puts "m2 : "
     
-    puts m1
+  m2 = gets
+  m2 = [[ m2.to_i ]]
+    
+  for i in (1..(tam-1))  
+      aux=gets
+      aux=aux.to_i
+      m2 << [aux] 
+  end
+    
+  for i in (1..(tam-1))  
+    for j in (0..(tam-1))    
+	aux=gets
+        aux=aux.to_i
+        m2[j] << aux 
+    end
+  end
     
   # 1.3 Generar matrices aleatoriamente (M1, M2 - Valores [1 - 99])
   else
@@ -99,8 +101,18 @@ end
   
   # 3.1 Operación (M3)
   
-    # PENDIENTE
+   result = Array.new(tam){Array.new(tam, 0)} #matriz bidimensional inicializada en 0
+
+
+for i in (0..(tam-1))
+  for j in (0..(tam.-1))
+    for k in (0..(tam-1))
+      result[i][j] += m1[i][k] * m2[k][j]	
+    end
+  end
+end
+
   
   # 3.2 Visualización
-    mostrar_matriz (M3)
+    mostrar_matriz (result)
   
