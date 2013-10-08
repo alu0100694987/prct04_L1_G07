@@ -10,8 +10,13 @@
 # Función mostrar_matriz (matriz)
 def mostrar_matriz (matriz)
   
-  print matriz
-  
+  for i in 0...matriz.size
+    for j in 0...matriz.size
+      print "#{matriz[i][j]} | "
+    end
+    puts
+  end
+
 end
 
 
@@ -36,11 +41,10 @@ end
 
 
   # 1.2 Rellenar matrices desde teclado (M1, M2 - Valores [1 - 99])
-  if (elec)
-    
+  if(elec == 0)
+
     puts "\n Si indica por teclado una cadena que no empieze por un numero se guardara en la matriz como un 0.\n"
  
-
     puts "m1 : "
     
     m1 = gets
@@ -54,7 +58,7 @@ end
     
     for i in (1..(tam-1))  
       for j in (0..(tam-1))    
-	aux=gets
+        aux=gets
         aux=aux.to_i
         m1[j] << aux 
       end
@@ -73,7 +77,7 @@ end
     
   for i in (1..(tam-1))  
     for j in (0..(tam-1))    
-	aux=gets
+        aux=gets
         aux=aux.to_i
         m2[j] << aux 
     end
@@ -82,37 +86,53 @@ end
   # 1.3 Generar matrices aleatoriamente (M1, M2 - Valores [1 - 99])
   else
     
-    # PENDIENTE
+    m1 = Array.new(tam){Array.new(tam)}
+    m2 = Array.new(tam){Array.new(tam)}
+
+    for i in 0...tam
+      for j in 0...tam
+        m1[i][j] = rand(100)
+        m2[i][j] = rand(100)    
+      end
+    end    
     
   end
-
+  
+  puts " m1 "
+  mostrar_matriz (m1)
+  puts " m2 "
+  mostrar_matriz (m2)
   
 # Fase 2: Suma de matrices
   
+  m3 = Array.new(tam){Array.new(tam)}
+  
   # 3.1 Operación (M3)
-  
-    # PENDIENTE
-  
+  puts " Suma m1 + m2 "
+  for i in 0...tam
+    for j in 0...tam     
+      m3[i][j] = (m1[i][j] + m2[i][j])    
+    end
+  end
+
   # 3.2 Visualización
-    mostrar_matriz (M3) 
+  mostrar_matriz (m3) 
 
     
 # Fase 3: Multiplicación de matrices
   
   # 3.1 Operación (M3)
   
-   result = Array.new(tam){Array.new(tam, 0)} #matriz bidimensional inicializada en 0
+  result = Array.new(tam){Array.new(tam, 0)} #matriz bidimensional inicializada en 0
 
-
-for i in (0..(tam-1))
-  for j in (0..(tam.-1))
-    for k in (0..(tam-1))
-      result[i][j] += m1[i][k] * m2[k][j]	
+  for i in (0..(tam-1))
+    for j in (0..(tam.-1))
+      for k in (0..(tam-1))
+        result[i][j] += m1[i][k] * m2[k][j]
+      end
     end
   end
-end
 
   
   # 3.2 Visualización
-    mostrar_matriz (result)
-  
+  mostrar_matriz (result)
