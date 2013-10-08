@@ -8,7 +8,7 @@
 
 
 # Función mostrar_matriz (matriz)
-def mostrar_matriz (matriz)
+def mostrar_matriz (matriz) # RESOLUCIÓN DE CONFLICTO: SE SELECCIONÓ UNA DE LAS DOS FORMAS IMPLEMENTADAS PARA MOSTRAR LA MATRIZ
   
   for i in 0...matriz.size
     for j in 0...matriz.size
@@ -39,7 +39,7 @@ end
     elec = elec.to_i
   end while (elec < 0 || elec > 1)
 
-
+  # RESOLUCIÓN DE CONFLICTOS: SE SUSTITUYE EL ESPACIO EN BLANCO POR LA FUNCIÓN CORRESPONDIENTE
   # 1.2 Rellenar matrices desde teclado (M1, M2 - Valores [1 - 99])
   if(elec == 0)
 
@@ -120,6 +120,7 @@ end
   mostrar_matriz (m3) 
 
     
+# RESOLUCIÓN DE CONFLICTOS: SE SUSTITUYÓ EL ESPACIO EN BLANCO POR LA FUNCIÓN CORRESPONDIENTE Y SE DEJÓ LA FUNCIÓN "mostrar_matriz" QUE LLAMABA AL PARÁMETRO CORRECTO 
 # Fase 3: Multiplicación de matrices
   
   # 3.1 Operación (M3)
