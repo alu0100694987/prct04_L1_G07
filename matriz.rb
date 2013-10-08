@@ -108,7 +108,7 @@ end
   m3 = Array.new(tam){Array.new(tam)}
   
   # 3.1 Operación (M3)
-  puts " Suma m1 + m2 "
+
   for i in 0...tam
     for j in 0...tam     
       m3[i][j] = (m1[i][j] + m2[i][j])    
@@ -116,6 +116,7 @@ end
   end
 
   # 3.2 Visualización
+  puts " Suma m1 + m2 "
   mostrar_matriz (m3) 
 
     
@@ -135,4 +136,5 @@ end
 
   
   # 3.2 Visualización
+  puts " Multiplicación m1 * m2 "
   mostrar_matriz (result)

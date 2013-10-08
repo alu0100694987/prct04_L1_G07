@@ -10,17 +10,13 @@
 # Función mostrar_matriz (matriz)
 def mostrar_matriz (matriz)
   
-<<<<<<< HEAD
-  print matriz
-=======
   for i in 0...matriz.size
     for j in 0...matriz.size
       print "#{matriz[i][j]} | "
     end
     puts
   end
->>>>>>> cris
-  
+
 end
 
 
@@ -47,12 +43,8 @@ end
   # 1.2 Rellenar matrices desde teclado (M1, M2 - Valores [1 - 99])
   if(elec == 0)
 
-    #PENDIENTE
-    
-<<<<<<< HEAD
     puts "\n Si indica por teclado una cadena que no empieze por un numero se guardara en la matriz como un 0.\n"
  
-
     puts "m1 : "
     
     m1 = gets
@@ -66,7 +58,7 @@ end
     
     for i in (1..(tam-1))  
       for j in (0..(tam-1))    
-	aux=gets
+        aux=gets
         aux=aux.to_i
         m1[j] << aux 
       end
@@ -85,14 +77,12 @@ end
     
   for i in (1..(tam-1))  
     for j in (0..(tam-1))    
-	aux=gets
+        aux=gets
         aux=aux.to_i
         m2[j] << aux 
     end
   end
     
-=======
->>>>>>> cris
   # 1.3 Generar matrices aleatoriamente (M1, M2 - Valores [1 - 99])
   else
     
@@ -133,23 +123,16 @@ end
   
   # 3.1 Operación (M3)
   
-   result = Array.new(tam){Array.new(tam, 0)} #matriz bidimensional inicializada en 0
-
-
-for i in (0..(tam-1))
-  for j in (0..(tam.-1))
-    for k in (0..(tam-1))
-      result[i][j] += m1[i][k] * m2[k][j]	
+  result = Array.new(tam){Array.new(tam, 0)} #matriz bidimensional inicializada en 0
+  puts " Multiplicación m1 * m2 "
+  for i in (0..(tam-1))
+    for j in (0..(tam.-1))
+      for k in (0..(tam-1))
+        result[i][j] += m1[i][k] * m2[k][j]
+      end
     end
   end
-end
 
   
   # 3.2 Visualización
-<<<<<<< HEAD
-    mostrar_matriz (result)
-  
-=======
-
-  
->>>>>>> cris
+  mostrar_matriz (result)
